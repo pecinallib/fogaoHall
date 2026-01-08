@@ -1,3 +1,105 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* Keyframes para animações */
+@keyframes sparklesFall {
+  0% {
+    opacity: 1;
+    transform: translateY(-10vh) translateX(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) translateX(100px);
+  }
+}
+
+@keyframes sparklesFallLeft {
+  0% {
+    opacity: 1;
+    transform: translateY(-10vh) translateX(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) translateX(-100px);
+  }
+}
+
+/* Classe base para faiscas */
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #ffff99, #ffff00);
+  border-radius: 50%;
+  box-shadow: 0 0 6px #ffff00, 0 0 12px #ffaa00;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Animações para cada faísca */
+.sparkle-1 {
+  left: 10%;
+  animation: sparklesFall 3s infinite ease-in;
+}
+
+.sparkle-2 {
+  left: 20%;
+  animation: sparklesFall 4s infinite ease-in 0.5s;
+}
+
+.sparkle-3 {
+  left: 30%;
+  animation: sparklesFall 3.5s infinite ease-in 1s;
+}
+
+.sparkle-4 {
+  left: 40%;
+  animation: sparklesFall 4.5s infinite ease-in 0.3s;
+}
+
+.sparkle-5 {
+  left: 50%;
+  animation: sparklesFall 3.2s infinite ease-in 0.8s;
+}
+
+.sparkle-6 {
+  left: 60%;
+  animation: sparklesFallLeft 4s infinite ease-in 0.2s;
+}
+
+.sparkle-7 {
+  left: 70%;
+  animation: sparklesFallLeft 3.8s infinite ease-in 0.9s;
+}
+
+.sparkle-8 {
+  left: 80%;
+  animation: sparklesFallLeft 4.2s infinite ease-in 0.4s;
+}
+
+.sparkle-9 {
+  left: 90%;
+  animation: sparklesFall 3.5s infinite ease-in 0.6s;
+}
+
+.sparkle-10 {
+  left: 15%;
+  animation: sparklesFallLeft 4.3s infinite ease-in 1.2s;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
